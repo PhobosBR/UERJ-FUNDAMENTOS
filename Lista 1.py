@@ -1,4 +1,4 @@
-def bubble_sort_max_value(cartas):
+def bubble_sort_max(cartas):
     n = len(cartas)
 
     for i in range(n - 1):
@@ -10,7 +10,7 @@ def bubble_sort_max_value(cartas):
 
 # Exemplo de uso:
 cartas = [50, 30, 80, 120, 90]
-maior_carta = bubble_sort_max_value(cartas)
+maior_carta = bubble_sort_max(cartas)
 
 if maior_carta is not None:
     print(f"A carta mais valiosa tem valor {maior_carta}.")
