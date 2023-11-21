@@ -1,19 +1,15 @@
-def decimal_para_binario_recursivo(numero_decimal, chamadas_restantes, resultado_binario=""):
-    if numero_decimal > 0 and chamadas_restantes > 0:
-        resto = numero_decimal % 2
-        resultado_binario = str(resto) + resultado_binario
-        numero_decimal //= 2
-        chamadas_restantes -= 1
-        return decimal_para_binario_recursivo(numero_decimal, chamadas_restantes, resultado_binario)
-    elif chamadas_restantes == 0:
-        return "Limite máximo de chamadas recursivas atingido."
+def decimal_para_binario_recursivo(numero, limite_recursao=5):
+    if limite_recursao == 0:
+        print("Limite máximo de chamadas recursivas atingido. Abortando.")
+        return ""
+    if numero == 0:
+        return "0"
+    elif numero == 1:
+        return "1"
     else:
-        return resultado_binario
+        return decimal_para_binario_recursivo(numero // 2, limite_recursao - 1) + str(numero % 2)
 
-
-numero_decimal = 11
-limite_chamadas = 5
-
-resultado = decimal_para_binario_recursivo(numero_decimal, limite_chamadas)
-
-print(f"A representação binária de {numero_decimal} é: {resultado}")
+# Exemplo de uso
+numero_decimal = 25
+representacao_binaria = decimal_para_binario_recursivo(numero_decimal)
+print(f"A representação binária de {numero_decimal} é: {representacao_binaria}")
