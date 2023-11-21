@@ -9,7 +9,6 @@ def decimal_para_binario_recursivo(numero, limite_recursao=5):
     else:
         return decimal_para_binario_recursivo(numero // 2, limite_recursao - 1) + str(numero % 2)
 
-# Exemplo de uso
 numero_decimal = 25
 representacao_binaria = decimal_para_binario_recursivo(numero_decimal)
 print(f"A representação binária de {numero_decimal} é: {representacao_binaria}")
