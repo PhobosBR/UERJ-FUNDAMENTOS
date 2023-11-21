@@ -1,18 +1,16 @@
-def bubble_sort_max(cartas):
-    n = len(cartas)
+def encontrar_carta_mais_valiosa(cartas):
+    carta_mais_valiosa = cartas[0]  
 
-    for i in range(n - 1):
-        for j in range(n - i - 1):
-            if cartas[j] > cartas[j + 1]:
-                cartas[j], cartas[j + 1] = cartas[j + 1], cartas[j]
+    for valor in cartas:
+        if valor > carta_mais_valiosa:
+            carta_mais_valiosa = valor
 
-    return cartas[-1]
+    return carta_mais_valiosa
 
-# Exemplo de uso:
-cartas = [50, 30, 80, 120, 90]
-maior_carta = bubble_sort_max(cartas)
+cartas = [10, 5, 8, 15, 12, 20, 7]
+mais_valiosa = encontrar_carta_mais_valiosa(cartas)
 
-if maior_carta is not None:
-    print(f"A carta mais valiosa tem valor {maior_carta}.")
+if mais_valiosa is not None:
+    print(f"A carta mais valiosa tem o valor: {mais_valiosa}")
 else:
-    print("O álbum de cartas está vazio.")
+    print("O álbum está vazio, não há cartas para avaliar.")
