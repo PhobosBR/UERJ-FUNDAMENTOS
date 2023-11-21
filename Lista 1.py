@@ -10,7 +10,4 @@ def encontrar_carta_mais_valiosa(cartas):
 cartas = [10, 5, 8, 15, 12, 20, 7]
 mais_valiosa = encontrar_carta_mais_valiosa(cartas)
 
-if mais_valiosa is not None:
-    print(f"A carta mais valiosa tem o valor: {mais_valiosa}")
-else:
-    print("O álbum está vazio, não há cartas para avaliar.")
+print(f"A carta mais valiosa tem o valor: {mais_valiosa}")
