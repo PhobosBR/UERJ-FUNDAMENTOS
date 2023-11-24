@@ -12,7 +12,7 @@ medias_atributos = [0] * num_atributos
 
 for i in range(num_atributos):
     total = 0
-    for j in range(num_atributos):
+    for j in range(num_personagens):
         total += pontuacoes_personagens[j][i]
         medias_atributos[i] = total / num_personagens
 
